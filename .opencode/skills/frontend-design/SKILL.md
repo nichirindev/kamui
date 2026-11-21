@@ -61,6 +61,28 @@ Also use the vendored skills for specific work: `impeccable` for craft audits,
 </div>
 ```
 
+**Comic panel page**
+
+```tsx
+<div className="grid gap-4 border-2 border-foreground bg-background p-4 shadow-neo-lg sm:grid-cols-2 lg:grid-cols-6">
+  <article className="relative rounded-[2px] border-2 border-[#0b0b0b] bg-pop-cyan p-6 text-[#0b0b0b] sm:col-span-2 lg:col-span-3 lg:row-span-2">
+    <span aria-hidden className="halftone pointer-events-none absolute right-0 top-0 h-40 w-40 opacity-20" />
+    <div className="relative z-10 flex h-full flex-col">
+      <Burst fillClassName="text-pop-pink" className="h-20 w-20">
+        <Icon className="h-7 w-7" />
+      </Burst>
+      <h3 className="mt-8 font-display text-3xl uppercase">Title</h3>
+    </div>
+  </article>
+</div>
+```
+
+Use a 2 px page frame, 16 px paper gutters, sharp `rounded-[2px]` panels and
+`Burst` from `components/site/burst`. On inverted panels pass
+`strokeClassName="stroke-background"`. Keep two accents per page. No hover
+motion: panels are printed, not clickable. Add `bubble` to `SectionHeading` for
+the caption.
+
 **Image frame**
 
 ```tsx
@@ -136,6 +158,7 @@ Use plain `<img>` for `blob:` previews. The optimizer is unnecessary offline.
 ## Quality checklist
 
 - [ ] 2 px ink borders, hard offset shadows, two accents at most
+- [ ] Comic pages use 16 px gutters, sharp corners and a visible burst outline
 - [ ] No kicker, no caption, no soft shadow, no gradient
 - [ ] Accent text is ink, never white
 - [ ] Buttons 44 px on phones, muted text at 65 percent or more

@@ -75,17 +75,26 @@ Every button steps up-left on hover and presses down-right on click. Minimum
 44 px tall on phones.
 
 **Section heading** — one display heading and one short right description.
-Equal left and right edges with the page container. No eyebrow.
+Equal left and right edges with the page container. No eyebrow. The steps and
+features headings use the speech-bubble variant: bordered card, top-left tail,
+hard shadow.
 
-**Step cards** — 2 px border, hard shadow, tinted icon tile, large ghost number,
-display title and plain body. The middle card sits 24 px lower on desktop only.
+**Comic panel page** — the steps and features are drawn as printed comic pages.
+A 2 px ink page frame with 16 px paper gutters and a hard shadow holds
+sharp-cornered panels. Icons sit in star bursts with a 2.5 px outline and a
+zero-blur offset shadow. Step panels carry a black number plate with a yellow
+border. Halftone corners are flat, never blurred.
+
+**Step page** — a wide first panel and two equal panels below. Fills are paper,
+inverted ink and pink. Tags read 01 to 03. The page uses yellow and pink only.
+
+**Feature page** — a cyan splash panel spanning two rows, one inverted panel,
+then three equal panels. Pink bursts throughout. The page uses cyan and pink
+only.
 
 **Gallery** — six tilted frames with 2 px borders and a yellow tag inside the
 frame. Hover straightens the frame and deepens the shadow. Every image ships a
 640 px and a master variant with `srcSet` and `sizes`.
-
-**Feature grid** — bento of 2 px cards on white. The first card spans two
-columns on cyan. Icon tiles are pink. Two accents only.
 
 **FAQ** — one bordered card holding a divided accordion. Triggers are display
 type and turn pink on hover.
@@ -114,7 +123,8 @@ movement and keeps opacity.
 ## 7. Page anatomy
 
 Landing: header, hero, ticker, steps, gallery, features, FAQ, CTA, footer.
-One idea per band. Every section starts with its heading.
+One idea per band. Every section starts with its heading. Steps and features
+are closed comic pages. The other bands stay open layouts.
 
 Editor: header, stage, inspector. The PNG renders at the source image
 resolution. Type and letter spacing scale by `canvas.width / previewWidth`.

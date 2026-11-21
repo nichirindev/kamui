@@ -24,7 +24,8 @@ truth is in [`../PRODUCT.md`](../PRODUCT.md). The agent workflow is in
 
 ### Layout
 - One statement per band. A heading, a short note, then the evidence.
-- Step cards with a ghost number and a tinted icon tile.
+- Steps and features as printed comic pages with paper gutters and burst badges.
+- A speech-bubble caption for the section note.
 - Tilted gallery frames that straighten on hover.
 - Editor as a shell: compact header, stage on the left, inspector on the right.
 - Edge-to-edge bands use the same container edges as the sections.

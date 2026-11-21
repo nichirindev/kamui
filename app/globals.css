@@ -182,6 +182,15 @@
     background-size: 6px 6px;
   }
 
+  /* Hard shadow for cut-out shapes such as the comic burst badges. */
+  .burst-shadow {
+    filter: drop-shadow(4px 4px 0 var(--neo-shadow));
+  }
+
+  .burst-shadow-lg {
+    filter: drop-shadow(6px 6px 0 var(--neo-shadow));
+  }
+
   /* The editor stage is a measurement surface, not page decoration. */
   .grid-paper {
     background-image:
