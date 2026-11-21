@@ -8,6 +8,8 @@
 
 # testing
 /coverage
+/test-results/
+/playwright-report/
 
 # next.js
 /.next/
@@ -16,23 +18,39 @@
 # production
 /build
 
+# caches and tool state
+/.turbo/
+/.cache/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+
 # misc
 .DS_Store
+Thumbs.db
+Desktop.ini
 *.pem
 
-# debug
+# debug logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
 # local env files
-.env*.local
+.env
+.env.*
+!.env.example
+
+# editors
+.idea/
+.vscode/
 
 # vercel
 .vercel
 
 # typescript
-*.tsbuildinfo
 next-env.d.ts
 
 # local build log
@@ -43,3 +61,6 @@ build.log
 
 # local gate state from the vendored taste skill
 /.taste-skill/
+
+# local scratch scripts and generated output
+/scripts/tmp-*
