@@ -66,7 +66,7 @@ export function Features() {
         {features.map((feature) => (
           <div
             key={feature.title}
-            className={`rounded-2xl border-2 border-[#0b0b0b] p-6 shadow-neo transition-transform duration-200 hover:-translate-y-1 ${feature.className}`}
+            className={`neo-hover rounded-2xl border-2 border-[#0b0b0b] p-6 shadow-neo ${feature.className}`}
           >
             <span className="grid h-11 w-11 place-items-center rounded-xl border-2 border-[#0b0b0b] bg-pop-pink text-[#0b0b0b]">
               <feature.icon className="h-5 w-5" strokeWidth={2.2} />

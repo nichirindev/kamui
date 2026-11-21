@@ -4,7 +4,6 @@ import React from 'react';
 import { Label } from '@/components/ui/label';
 import { Slider } from '@/components/ui/slider';
 import { Input } from '@/components/ui/input';
-import { LockIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface SliderFieldProps {
@@ -16,7 +15,6 @@ interface SliderFieldProps {
   currentValue: number;
   hasTopPadding?: boolean;
   disabled?: boolean;
-  premiumFeature?: boolean;
   handleAttributeChange: (attribute: string, value: number) => void;
 }
 
@@ -29,7 +27,6 @@ const SliderField: React.FC<SliderFieldProps> = ({
     currentValue,
     hasTopPadding = true,
     disabled = false,
-    premiumFeature = false,
     handleAttributeChange
   }) => {
     const handleSliderInputFieldChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -42,15 +39,7 @@ const SliderField: React.FC<SliderFieldProps> = ({
     return (
       <div className={cn('mt-2', hasTopPadding && 'pt-5')}>
         <div className="flex items-center justify-between gap-3">
-          <div className="flex items-center gap-2">
-            <Label htmlFor={attribute}>{label}</Label>
-            {premiumFeature && (
-              <div className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-[0.14em] text-muted-foreground">
-                <LockIcon size={11} />
-                <span>Pro</span>
-              </div>
-            )}
-          </div>
+          <Label htmlFor={attribute}>{label}</Label>
           <Input
             id={`${attribute}-value`}
             type="text"

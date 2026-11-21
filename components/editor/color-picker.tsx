@@ -87,7 +87,7 @@ const ColorPicker: React.FC<ColorPickerProps> = ({
                       aria-label={color}
                       style={{ background: color }}
                       onClick={() => handleAttributeChange(attribute, color)}
-                      className="relative grid min-h-[44px] aspect-square place-items-center rounded-md border-2 border-foreground transition-transform hover:scale-110"
+                      className="relative grid min-h-[44px] aspect-square place-items-center rounded-md border-2 border-foreground transition-transform duration-150 ease-neo hov:hover:scale-110"
                     >
                       {active && (
                         <Check

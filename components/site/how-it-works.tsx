@@ -42,8 +42,8 @@ export function HowItWorks() {
         {steps.map((step, i) => (
           <li
             key={step.n}
-            className={`relative rounded-2xl border-2 border-[#0b0b0b] bg-card p-6 shadow-neo transition-transform duration-200 hover:-translate-y-1 ${
-              i === 1 ? "md:translate-y-6" : ""
+            className={`neo-hover relative rounded-2xl border-2 border-[#0b0b0b] bg-card p-6 shadow-neo ${
+              i === 1 ? "md:top-6" : ""
             }`}
           >
             <div className="flex items-center justify-between">

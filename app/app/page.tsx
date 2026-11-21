@@ -9,6 +9,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { ModeToggle } from '@/components/mode-toggle';
 import { Accordion } from '@/components/ui/accordion';
 import TextCustomizer from '@/components/editor/text-customizer';
+import { toast } from '@/hooks/use-toast';
 
 import {
     AlertTriangle,
@@ -233,6 +234,11 @@ const Page = () => {
             link.download = 'text-behind-image.png';
             link.href = dataUrl;
             link.click();
+            toast({
+                title: 'Image saved',
+                description: 'text-behind-image.png is in your downloads.',
+                duration: 4000,
+            });
         }
     };
 
@@ -243,7 +249,7 @@ const Page = () => {
             <canvas ref={canvasRef} style={{ display: 'none' }} />
 
             {/* -------------------------------------------------- header */}
-            <header className="sticky top-0 z-40 border-b-2 border-foreground bg-background/85 backdrop-blur-md">
+            <header className="sticky top-0 z-40 border-b-2 border-foreground bg-background">
                 <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between gap-3 px-4 sm:px-6">
                     <div className="flex min-w-0 items-center gap-2.5">
                         <Link href="/" className="flex items-center gap-2.5" aria-label="Text Behind home">

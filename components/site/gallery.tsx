@@ -32,10 +32,10 @@ export function Gallery() {
             <Link
               key={shot.src}
               href="/app"
-              className={`group ui-press block focus-visible:outline-offset-4 ${shot.tilt} transition-transform duration-300 hover:rotate-0`}
+              className={`group ui-press block focus-visible:outline-offset-4 ${shot.tilt} transition-transform duration-300 hov:hover:rotate-0`}
               aria-label={`${shot.tag}: open the studio`}
             >
-              <div className="relative overflow-hidden border-2 border-[#0b0b0b] bg-card p-1.5 shadow-neo transition-shadow duration-200 group-hover:shadow-neo-lg">
+              <div className="relative overflow-hidden border-2 border-[#0b0b0b] bg-card p-1.5 shadow-neo transition-shadow duration-200 hov:group-hover:shadow-neo-lg">
                 <img
                   src={shot.src}
                   srcSet={`${shot.src.replace(/\.jpg$/, "-640.jpg")} 640w, ${shot.src} ${shot.w}w`}
@@ -43,7 +43,7 @@ export function Gallery() {
                   alt={shot.alt}
                   loading={i > 2 ? "lazy" : "eager"}
                   decoding="async"
-                  className="aspect-[4/5] w-full border-2 border-[#0b0b0b] object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  className="aspect-[4/5] w-full border-2 border-[#0b0b0b] object-cover transition-transform duration-500 hov:group-hover:scale-[1.02]"
                 />
                 <span className="absolute left-4 top-4 border-2 border-[#0b0b0b] bg-pop-yellow px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em] text-[#0b0b0b]">
                   {shot.tag}

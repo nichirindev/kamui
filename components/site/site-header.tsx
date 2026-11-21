@@ -13,10 +13,10 @@ const links = [
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b-2 border-foreground bg-background/85 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b-2 border-foreground bg-background">
       <div className="mx-auto flex h-16 max-w-[1360px] items-center justify-between gap-4 px-5 sm:px-8">
         <Link href="/" className="group flex items-center gap-2.5" aria-label="Text Behind home">
-          <span className="grid h-9 w-9 place-items-center rounded-lg border-2 border-[#0b0b0b] bg-pop-pink font-display text-lg leading-none text-[#0b0b0b] shadow-neo-sm transition-transform duration-200 group-hover:-rotate-6">
+          <span className="grid h-9 w-9 place-items-center rounded-lg border-2 border-[#0b0b0b] bg-pop-pink font-display text-lg leading-none text-[#0b0b0b] shadow-neo-sm transition-transform duration-200 ease-neo hov:group-hover:-rotate-6">
             T/
           </span>
           <span className="font-display text-xl uppercase leading-none tracking-wide sm:text-2xl">

@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const plugin = require("tailwindcss/plugin");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -88,6 +89,9 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      transitionTimingFunction: {
+        neo: "var(--ease-out)",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -104,7 +108,16 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), addVariablesForColors],
+  plugins: [
+    require("tailwindcss-animate"),
+    addVariablesForColors,
+    // `hov:` prefixes hover states that must never fire on touch, where a
+    // tapped element keeps its hover styling. Mirrors DESIGN.md: "Hover
+    // transforms are gated behind a fine pointer."
+    plugin(({ addVariant }: { addVariant: (name: string, value: string) => void }) => {
+      addVariant("hov", "@media (hover: hover) and (pointer: fine)");
+    }),
+  ],
 };
 
 function addVariablesForColors({ addBase, theme }: any) {

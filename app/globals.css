@@ -144,6 +144,12 @@
       transform: translate(-2px, -2px);
       box-shadow: 7px 7px 0 0 var(--neo-shadow);
     }
+
+    /* Ghost and link buttons still step up-left, but must not grow a shadow
+       out of nothing: they opt out with `shadow-none`. */
+    .neo-hover.shadow-none:hover {
+      box-shadow: none;
+    }
   }
 
   .neo-hover:active {
@@ -268,6 +274,16 @@
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  /* Keep opacity, drop movement. Covers transitions authored with Tailwind
+     utilities as well as the hand-written ones below. */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 
   .marquee-track,
